@@ -1,0 +1,233 @@
+/* general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    color: #36545E;
+} 
+figcaption {
+    text-align: center;
+}
+figcaption h3 {
+    padding: 5px;
+}
+figcaption p {
+    max-width: 200px;
+    font-size: 0.9rem;
+}
+.services-heading, .team-heading, .contacts-heading {
+    text-transform: uppercase;
+    background-color: #A4B2C7;    
+}
+.services-heading, .services-description, .team-heading, .contacts-heading {
+    text-align: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+/* header with logo and nav bar */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #57696e;
+    flex-wrap: wrap;
+}
+.nav-main ul {
+    list-style: none;
+    display: flex;
+}
+.nav-main ul li {
+    padding: 20px;
+}
+.navigation-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+}
+.navigation-link:hover {
+    text-decoration: underline;
+    color: #71B2C7;
+}
+.logo {
+    margin-left: 10px;
+    font-family: "Londrina Shadow";
+    color: #FFFFFF;
+    letter-spacing: 0.2rem;
+}
+
+
+/* hero section */
+
+.hero {    
+    height: 400px;
+    background-image: url("/resources/images/billy-huynh-v9bnfMCyKbg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.cta-square {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+.hero-description {
+    color: #36545E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cta-button {
+    width: 45%;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 1rem;
+    background-color: #36545E;
+    color: #FFFFFF;
+    border-radius: 10px;
+    letter-spacing: 0.1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cta-button:hover {
+    background-color: #71B2C7;
+    cursor: pointer;
+}
+.cta-button:active {
+    background-color: #6A767A;
+    cursor: pointer;
+}
+
+
+  
+    
+/* services */
+
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+.services-box {
+    display: flex;
+    flex: 1;
+    justify-content: center;    
+}
+.service-image {
+    width: 200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+
+
+/* our team */
+.team-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url("/resources/images/billy-huynh-v9bnfMCyKbg-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.staff-box {
+    display: flex;
+    flex-direction: column;
+}
+.staff-image {
+    width: 200px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* contacts */
+
+.contact-boxes {
+    display: grid;
+    grid-template: repeat (6, 100px) / repeat(12, 1fr)
+}
+
+.contact-image {
+    width: 300px;
+    height: auto;
+    margin-top: 15px;
+}
+
+.contact-info {
+    grid-area: 2 / 2 / 6 / 6;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.contact-address {
+    grid-area: 2 / 7 / 6 / 13;
+    line-height: 1.5rem;
+    padding-bottom: 20px;
+}
+.contact-mobile {
+    visibility: hidden;
+}
+
+/* footer */
+
+footer {
+    background-color: #57696e;
+    color: #FFFFFF;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #71B2C7;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 800px) {
+    .services-container, .services-box, .team-boxes {
+        flex-direction: column;
+        align-items: center;
+    }
+    .staff-image {
+        width: 100px;
+        height: auto;
+    }
+    .contact-boxes {
+        grid-auto-flow: column;
+    }
+    .contact-mobile {
+        visibility: visible;
+    }
+    .contact-address{
+        display: none;
+    }
+    footer {
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navigation-link {
+        font-size: 0.8rem;
+    }
+}
